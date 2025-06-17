@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Viagem Interplanetária</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora de Viagem Interplanetária</h1>
+      <p class="subtitle">Calcule a rota ideal entre planetas</p>
+
+      <div class="input-group">
+        <label for="planets">Número de planetas:</label>
+        <input type="number" id="planets" min="2" placeholder="Digite o número de planetas" />
+      </div>
+
+      <div class="input-group">
+        <label for="portals">Portais (um por linha, formato: origem destino custo):</label>
+        <textarea id="portals" rows="5" placeholder="Exemplo:&#10;1 2 10&#10;2 3 15&#10;3 4 5"></textarea>
+      </div>
+
+      <div class="dual-input">
+        <div class="input-group">
+          <label for="start">Planeta de partida:</label>
+          <input type="number" id="start" min="1" placeholder="Planeta inicial" />
+        </div>
+
+        <div class="input-group">
+          <label for="end">Planeta de destino:</label>
+          <input type="number" id="end" min="1" placeholder="Planeta final" />
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button id="calculate" style="--clr: #ffd700"><span>CALCULAR</span><i></i></button>
+        <button id="reset" style="--clr: #ff0044"><span>REINICIAR</span><i></i></button>
+      </div>
+
+      <div class="result-container">
+        <h2>Resultado</h2>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
